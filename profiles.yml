@@ -1,0 +1,12 @@
+marketplace_dv:
+  outputs:
+    dev:
+      dbname: "{{ env_var('DWH_NAME') }}"
+      host: "{{ env_var('DWH_HOST') }}"
+      pass: "{{ env_var('DWH_PASSWORD') }}"
+      port: "{{ env_var('DWH_PORT') | as_number }}"
+      schema: "{{ env_var('DWH_SCHEMA') }}"
+      threads: 4
+      type: postgres
+      user: "{{ env_var('DWH_USER') }}"
+  target: dev

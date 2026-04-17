@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: raw_data
+    description: "Raw data layer populated by Debezium from source services"
+    tables:
+      - name: orders
+        description: "Raw orders data"
+      - name: order_items
+        description: "Raw order items data"
+      - name: products
+        description: "Raw products data"
+      - name: shipments
+        description: "Raw shipments data"
+      - name: warehouses
+        description: "Raw warehouses data"

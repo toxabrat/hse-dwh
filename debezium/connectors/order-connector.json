@@ -1,0 +1,23 @@
+{
+  "name": "order-service-connector",
+  "config": {
+    "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+    "plugin.name": "pgoutput",
+    "database.hostname": "postgres-order-replica",
+    "database.port": "5432",
+    "database.user": "postgres",
+    "database.password": "postgres",
+    "database.dbname": "order_service_db",
+    "topic.prefix": "order-service",
+    "table.include.list": "order_service_db.products,order_service_db.orders,order_service_db.order_items,order_service_db.order_status_history",
+    "snapshot.mode": "initial",
+    "heartbeat.interval.ms": "5000",
+    "slot.name": "order_service_debezium",
+    "publication.name": "order_service_publication",
+    "topic.creation.default.cleanup.policy": "delete",
+    "topic.creation.default.partitions": "1",
+    "topic.creation.default.replication.factor": "1",
+    "topic.creation.default.retention.ms": "604800000",
+    "topic.creation.enable": "true"
+  }
+}

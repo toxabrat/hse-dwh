@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: purchase_analytics_mart
+    columns:
+      - name: purchase_date
+        tests: [not_null]
+      - name: product_id
+        tests: [not_null]
+      - name: purchase_qty
+        tests: [not_null]
+
+  - name: warehouse_delivery_mart
+    columns:
+      - name: shipment_date
+        tests: [not_null]
+      - name: warehouse_id
+        tests: [not_null]
+      - name: order_count
+        tests: [not_null]

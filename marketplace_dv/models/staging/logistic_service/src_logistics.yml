@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: external_logistics
+    database: dwh_db
+    schema: raw_data
+    tables:
+      - name: warehouses
+        identifier: warehouses
+      - name: pickup_points
+        identifier: pickup_points
+      - name: shipments
+        identifier: shipments
+      - name: shipment_movements
+        identifier: shipment_movements
+      - name: shipment_status_history
+        identifier: shipment_status_history

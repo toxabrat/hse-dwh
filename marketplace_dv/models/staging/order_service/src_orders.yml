@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: external_orders
+    database: dwh_db
+    schema: raw_data
+    tables:
+      - name: orders
+        identifier: orders
+      - name: products
+        identifier: products
+      - name: order_items
+        identifier: order_items
+      - name: order_status_history
+        identifier: order_status_history

@@ -1,0 +1,23 @@
+{
+  "name": "logistics-service-connector",
+  "config": {
+    "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+    "plugin.name": "pgoutput",
+    "database.hostname": "postgres-logistics-replica",
+    "database.port": "5432",
+    "database.user": "postgres",
+    "database.password": "postgres",
+    "database.dbname": "logistics_service_db",
+    "topic.prefix": "logistics-service",
+    "table.include.list": "logistics_service_db.warehouses,logistics_service_db.pickup_points,logistics_service_db.shipments,logistics_service_db.shipment_movements,logistics_service_db.shipment_status_history",
+    "snapshot.mode": "initial",
+    "heartbeat.interval.ms": "5000",
+    "slot.name": "logistics_service_debezium",
+    "publication.name": "logistics_service_publication",
+    "topic.creation.default.cleanup.policy": "delete",
+    "topic.creation.default.partitions": "1",
+    "topic.creation.default.replication.factor": "1",
+    "topic.creation.default.retention.ms": "604800000",
+    "topic.creation.enable": "true"
+  }
+}

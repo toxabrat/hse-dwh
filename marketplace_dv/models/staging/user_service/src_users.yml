@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: external_users
+    database: dwh_db
+    schema: raw_data
+    tables:
+      - name: user_addresses
+        identifier: user_addresses
+      - name: users
+        identifier: users
+      - name: user_status_history
+        identifier: user_status_history
